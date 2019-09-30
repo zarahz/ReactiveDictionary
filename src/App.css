@@ -1,33 +1,67 @@
-.App {
+.box {
+  background: #424242;
+  color: white;
+  width: 80%;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+}
+
+.showInCenter {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.searchField {
+  width: 20%;
+  height: 30px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 2px solid blueviolet;
+  text-align: center;
+  background: #424242;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.searchField::placeholder {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchField:focus {
+  outline: none;
+}
+
+.dictionaryItem {
+  padding: 10px;
+  font-size: 20px;
+  width: 900px;
+  margin: 10px;
+  display: inherit;
+  background: #212121;
+  color: white;
+}
+
+.dictionaryItem:hover {
+  cursor: pointer;
+  background: #bdbdbd;
+  color: black;
+}
+
+.item:hover {
+  border: none;
+  border-bottom: 2px solid blueviolet;
+}
+
+.spelling {
+  color: #424242;
+}
+
+.def {
+  color: #8a2be2c7;
+}
+
+.defDevider {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
