@@ -1,0 +1,77 @@
+@import './variables.scss';
+
+%box {
+  background: transparentize($secondary-color, 0.9);
+  display: inline-block;
+  padding: 5px;
+  margin: 10px;
+  width: -webkit-fill-available;
+}
+
+.dictionary-header{
+  @extend %box;
+  background: $primary-color-light;
+  margin: 0;
+}
+
+.definition-box{
+  @extend %box;
+  height: 100%;
+}
+
+.showInCenter {
+  text-align: center;
+}
+
+.searchField {
+  width: 50%;
+  height: 30px;
+  font-size: 14px;
+  margin: 5px;
+  border: none;
+  border-bottom: 2px solid $secondary-color;
+  text-align: center;
+  background: $primary-color;
+  color: $secondary-color;
+}
+
+.searchField::placeholder {
+  color: $secondary-color-light;
+}
+
+.searchField:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px $primary-color;
+}
+
+.dictionaryItem {
+  padding: 10px;
+  font-size: 20px;
+  width: 900px;
+  margin: 10px;
+  display: inherit;
+  background: white;
+  color: $secondary-color;
+}
+
+%dict-hover-colors {
+  background: $secondary-color-light;
+  color: $primary-color-light;
+}
+
+.dictionaryItem:hover {
+  cursor: pointer;
+  transition: all ease-in 0.15s;
+  @extend %dict-hover-colors
+}
+
+.spelling {
+  color: transparentize($secondary-color-dark, 0.6);
+}
+
+.defDevider {
+  border: 0;
+  height: 0;
+  border-top: 1px solid transparentize($secondary-color-dark, 0.6);
+}
+

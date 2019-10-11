@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import Dictionary from "./Dictionary";
+import './styles/App.scss';
+import Dictionary from "./components/dictionary/Dictionary";
 
 function App() {
   return (

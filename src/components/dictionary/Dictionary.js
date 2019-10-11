@@ -1,5 +1,5 @@
 import React from "react";
-import { readDictionary } from "./Reader";
+import { readDictionary } from "../../utils/Reader";
 
 class Dictionary extends React.Component {
     constructor(props) {
@@ -51,7 +51,7 @@ class Dictionary extends React.Component {
     }
 
     displayItems() {
-        // if searchterm does not match any item show default message
+        // if searchterm does not match any items show default message
         if (!this.state.filteredItems.length) {
             return <span className="def">No items found</span>
         }
@@ -82,7 +82,7 @@ class Dictionary extends React.Component {
     render() {
         return (
             <div>
-                <div className="box">
+                <div className="dictionary-header">
                     <h1>Dictionary</h1>
                     <input
                         name="search"
@@ -91,8 +91,7 @@ class Dictionary extends React.Component {
                         autoComplete="off"
                         onChange={e => this.filterItems(e)} />
                 </div>
-                <hr />
-                <div className="box">
+                <div className="definition-box">
                     {this.displayItems()}
                 </div>
             </div>
